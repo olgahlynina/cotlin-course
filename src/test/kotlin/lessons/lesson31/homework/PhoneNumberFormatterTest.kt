@@ -10,6 +10,7 @@ import ru.stimmax.lessons.lesson31.homework.PhoneNumberFormatter
 class PhoneNumberFormatterTest {
     private val formatter = PhoneNumberFormatter()
 
+    // В параметре name задается шаблон вывода имени теста с порядковым номером [{index}]
     @ParameterizedTest(name = "[{index}] input=\"{0}\", expected=\"{1}\"")
     @MethodSource("provideValidPhoneNumbers")
     fun `should correctly format valid russian phone numbers`(input: String, expectedFormat: String) {
